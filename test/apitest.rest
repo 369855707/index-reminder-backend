@@ -1,0 +1,37 @@
+  @hostname=localhost
+  @port=3000
+  @port4000 = 4000
+  @host={{hostname}}:{{port}}
+  @host4000={{hostname}}:{{port4000}}
+
+  ###
+  POST http://{{host4000}}/login HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  
+  {
+      "username":"Victor",
+      "password" : "password123admin"
+  }
+
+
+###
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlZpY3RvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU4NjA5MzMxN30.69VLxUpbUmetN4tlmDDNcUBgOSRhshpidcIaDJiwOaI
+  GET http://{{host4000}}/books HTTP/1.1
+  Authorization: Bearer {{token}}
+
+
+###
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlZpY3RvciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTU4NjA5MzMxN30.69VLxUpbUmetN4tlmDDNcUBgOSRhshpidcIaDJiwOaI
+  POST http://{{host4000}}/books HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  Authorization: Bearer {{token}}
+  
+  {
+    "author": "Victor",
+    "country": "China",
+    "language": "Chinese",
+    "pages": 666,
+    "title": "my big boss Amrit",
+    "year": 1986
+  }
+

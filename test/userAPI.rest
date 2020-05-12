@@ -1,0 +1,73 @@
+  @hostname=localhost
+  @port=3000
+  @host={{hostname}}:{{port}}
+
+  ###
+  POST http://{{host}}/users/register HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  
+  {
+      "username" : "20200507",
+      "password" : "20200507"
+  }
+
+###
+ POST http://{{host}}/users/authenticate HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  
+  {
+     "username" : "20200507",
+     "password" : "20200507"
+  }
+
+  
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThkZDhlZDRmZGEyZTUyZWMwMTBjNzQiLCJpYXQiOjE1ODYzOTUxMjR9.y8_4vrO46tdVU26Tty1ZduD6Dp4904mdLHe0JYQlP8k
+ GET http://{{host}}/users/ HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  Authorization: Bearer {{token}}
+
+  
+  
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThkZDhlZDRmZGEyZTUyZWMwMTBjNzQiLCJpYXQiOjE1ODYzOTUxMjR9.y8_4vrO46tdVU26Tty1ZduD6Dp4904mdLHe0JYQlP8k
+ GET http://{{host}}/users/current HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  Authorization: Bearer {{token}}
+
+
+
+  
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThkZDhlZDRmZGEyZTUyZWMwMTBjNzQiLCJpYXQiOjE1ODYzOTUxMjR9.y8_4vrO46tdVU26Tty1ZduD6Dp4904mdLHe0JYQlP8k
+ GET http://{{host}}/users/5e8dd5ef327b4a64ece62a57 HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  Authorization: Bearer {{token}}
+
+
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThkZDhlZDRmZGEyZTUyZWMwMTBjNzQiLCJpYXQiOjE1ODYzOTUxMjR9.y8_4vrO46tdVU26Tty1ZduD6Dp4904mdLHe0JYQlP8k
+ PUT http://{{host}}/users/5e8fca96e15cf2278cb8e4e1 HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  Authorization: Bearer {{token}}
+
+  {
+     "subscribe": [{"code":"000002"}]
+  }
+
+
+###
+ DELETE http://{{host}}/users/5e8dd8ed4fda2e52ec010c74 HTTP/1.1
+  Authorization: Bearer {{token}}
+
+
+###
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZTllNDliNDY1NzJmZTVlNzg1NGRkMTgiLCJpYXQiOjE1ODc0MzIyNjh9.RS4a6C1vB5lxIiG2nCFNiGcBSFomh4At-YaySXGACfY
+  POST http://{{host}}/sms/sendTestSMS HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  Authorization: Bearer {{token}}
+  
+  {
+    "id": "5e9654d69ccca22b5886e959",
+    "sbid": "000002"
+  }
