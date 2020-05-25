@@ -25,7 +25,7 @@ function triggerAlarm({ code, alarmPrice }) {
 
     request(requestOptions, (err, res, body) => {
         if (err) {
-            return console.log(err);
+            return
         }
         if (Array.isArray(JSON.parse(body))) {
             const quote = JSON.parse(body)[0];
@@ -34,7 +34,7 @@ function triggerAlarm({ code, alarmPrice }) {
             if (alarmPrice < quote.adjHigh) {
                 sendSMS({ quote });
             } else {
-                console.log('scan finished, ' +code+ ' not hit the ' + alarmPrice + ' yet');
+                console.log('scan finished, ' + code + ' not hit the ' + alarmPrice + ' yet');
                 return
             }
         } else {

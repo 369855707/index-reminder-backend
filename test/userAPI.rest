@@ -16,13 +16,13 @@
   content-type: application/json;charset=UTF-8
   
   {
-     "username" : "20200507",
-     "password" : "20200507"
+     "username" : "victor",
+     "password" : "victor"
   }
 
   
 ###
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThkZDhlZDRmZGEyZTUyZWMwMTBjNzQiLCJpYXQiOjE1ODYzOTUxMjR9.y8_4vrO46tdVU26Tty1ZduD6Dp4904mdLHe0JYQlP8k
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTAyOTEyMTF9.8b-E345VvAXW5BDT3s-ZmXxSzbfsGjUWi4nU-rnzJYY
  GET http://{{host}}/users/ HTTP/1.1
   content-type: application/json;charset=UTF-8
   Authorization: Bearer {{token}}
@@ -30,16 +30,16 @@
   
   
 ###
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThkZDhlZDRmZGEyZTUyZWMwMTBjNzQiLCJpYXQiOjE1ODYzOTUxMjR9.y8_4vrO46tdVU26Tty1ZduD6Dp4904mdLHe0JYQlP8k
+@hahatoken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTAyOTI0NDcsImV4cCI6MTU5MDI5MjUwN30.qUfunmYPozD0VHWkDI33zcIzg7tGR4HYVogo1pu55No
  GET http://{{host}}/users/current HTTP/1.1
   content-type: application/json;charset=UTF-8
-  Authorization: Bearer {{token}}
+  Authorization: Bearer {{hahatoken}}
 
 
 
   
 ###
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZThkZDhlZDRmZGEyZTUyZWMwMTBjNzQiLCJpYXQiOjE1ODYzOTUxMjR9.y8_4vrO46tdVU26Tty1ZduD6Dp4904mdLHe0JYQlP8k
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTAyOTAxNzYsImV4cCI6MTU5MDI5MDE3Nn0.__WOrn_L529W0TIwk2IW1JW3qd8r4jgL3QA-XnAaz-E
  GET http://{{host}}/users/5e8dd5ef327b4a64ece62a57 HTTP/1.1
   content-type: application/json;charset=UTF-8
   Authorization: Bearer {{token}}

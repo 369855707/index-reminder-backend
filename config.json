@@ -1,3 +1,4 @@
-{ 
-     "secret": "wskardelsharpeye"
+{
+     "secret": "wskardelsharpeye",
+     "refresh_secret": "refreshthetoken"
 }

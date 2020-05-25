@@ -5,12 +5,12 @@
   @host4000={{hostname}}:{{port4000}}
 
   ###
-  POST http://{{host4000}}/login HTTP/1.1
+  POST http://{{host}}/login HTTP/1.1
   content-type: application/json;charset=UTF-8
   
   {
-      "username":"Victor",
-      "password" : "password123admin"
+      "username":"victor",
+      "password" : "victor"
   }
 
 
