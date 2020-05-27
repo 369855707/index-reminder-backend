@@ -23,12 +23,14 @@ app.use(jwt({ secret: config.secret }).unless({
         '/users/register',
         '/users/authenticate',
         '/sms/test',
-        '/sms/send-test'
+        '/sms/send-test',
+        '/jwt/refresh'
     ]
 }))
 
 app.use('/users', require('./users/user.controller'));
 app.use('/sms', require('./sms/sms.controller'));
+app.use('/jwt', require('./jwt/jwt.controller'));
 
 app.use(errorHandler)
 

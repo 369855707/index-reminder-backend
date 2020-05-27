@@ -1,6 +1,7 @@
 module.exports = errorHandler;
 
 function errorHandler(err, req, res, next) {
+    console.log(JSON.stringify(err))
     if (typeof (err) === 'string') {
         return res.status(400).json({ message: err });
     }

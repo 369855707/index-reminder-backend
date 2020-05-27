@@ -12,37 +12,35 @@
   }
 
 ###
+@refreshtoken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTA1ODkxNTAsImV4cCI6MTU5MDU4OTIxMH0.LuQW-840-jvLDDDVdyxAUmRzUAiOQ-_u5laIjqrmlF4
+ POST http://{{host}}/jwt/refresh HTTP/1.1
+  content-type: application/json;charset=UTF-8
+  Authorization: Bearer {{refreshtoken}}
+ 
+
+###
  POST http://{{host}}/users/authenticate HTTP/1.1
   content-type: application/json;charset=UTF-8
   
   {
      "username" : "victor",
      "password" : "victor"
-  }
+  }  
 
-  
+
 ###
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTAyOTEyMTF9.8b-E345VvAXW5BDT3s-ZmXxSzbfsGjUWi4nU-rnzJYY
+@userstoken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTA1ODkwNjgsImV4cCI6MTU5MDU4OTEyOH0.Yro1XDXYYKS75clu4Bem2rj9u5X5D9_eFB0H3bFhloM
  GET http://{{host}}/users/ HTTP/1.1
   content-type: application/json;charset=UTF-8
-  Authorization: Bearer {{token}}
+  Authorization: Bearer {{userstoken}}
 
   
   
 ###
-@hahatoken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTAyOTI0NDcsImV4cCI6MTU5MDI5MjUwN30.qUfunmYPozD0VHWkDI33zcIzg7tGR4HYVogo1pu55No
+@hahatoken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTA1MzkyNDQsImV4cCI6MTU5MDUzOTMwNH0.fx8JEa5wP9huYW20RNTKvgYw-8XX1XQ5JwlPbF4y7To
  GET http://{{host}}/users/current HTTP/1.1
   content-type: application/json;charset=UTF-8
   Authorization: Bearer {{hahatoken}}
-
-
-
-  
-###
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZWI3ZDQ4MjQ2MWYxODAwMTc0ZWVlNzEiLCJpYXQiOjE1OTAyOTAxNzYsImV4cCI6MTU5MDI5MDE3Nn0.__WOrn_L529W0TIwk2IW1JW3qd8r4jgL3QA-XnAaz-E
- GET http://{{host}}/users/5e8dd5ef327b4a64ece62a57 HTTP/1.1
-  content-type: application/json;charset=UTF-8
-  Authorization: Bearer {{token}}
 
 
 ###
